@@ -200,10 +200,6 @@ git commit -m "commit message"
 4. Head back on the terminal, checkout from the feature branch into the master, and pull down the latest changes.
 
 
-![Screen Shot 2021-06-09 at 10 42 34 AM](https://user-images.githubusercontent.com/44268796/121376309-69b39000-c90f-11eb-88c0-2335992cbe2e.png)
-
-![Screen Shot 2021-06-09 at 11 03 06 AM](https://user-images.githubusercontent.com/44268796/121379712-4c33f580-c912-11eb-8ac6-8484e0f70fb2.png)
-
 With the update to GitHub repository, Jenkins automatically triggered a new build and all the changes were updated in the workspace.
 
 ![Screen Shot 2021-06-09 at 11 06 28 AM](https://user-images.githubusercontent.com/44268796/121380309-c3698980-c912-11eb-8da5-04ae27b6b0ce.png)
