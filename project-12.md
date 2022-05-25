@@ -30,8 +30,6 @@ The main idea of save_artifacts project is to save artifacts into /home/ubuntu/a
 Test the set up by making some change in README.MD file inside the ansible-config-mgt repository (right inside main branch).
 If both Jenkins jobs have completed one after another - all the files will be inside /home/ubuntu/ansible-config-artifact directory and it will be updated with every commit to the main branch.
 
-![Screen Shot 2021-06-11 at 10 35 44 AM](https://user-images.githubusercontent.com/44268796/121703419-cbefca80-caa0-11eb-90a0-e6d1a478710c.png)
-
 ![Screen Shot 2021-06-11 at 10 35 07 AM](https://user-images.githubusercontent.com/44268796/121703327-b37fb000-caa0-11eb-8773-045a3be1825b.png)
 
 Now the Jenkins pipeline is more neat and clean.
@@ -167,9 +165,6 @@ The entire folder structure should look like below. For this project, tests, fil
 <Web1-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' ansible_ssh_private_key_file=<path-to-.pem-private-key>
 <Web2-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' ansible_ssh_private_key_file=<path-to-.pem-private-key>
 ```
-In /etc/ansible/ansible.cfg file, uncomment roles_path string and provide a full path to the roles directory roles_path = /home/ubuntu/ansible-config-mgt/roles, so Ansible could know where to find configured roles.
-
-It is time to start adding some logic to the webserver role. Go into tasks directory, and within the main.yml file, start writing configuration tasks to do the following:
 
 1. Install and configure Apache (httpd service)
 2. Clone Tooling website from GitHub https://github.com/<your-name>/tooling.git.
@@ -242,10 +237,7 @@ The entry point to the ansible configuration is the site.yml file. Therefore, th
   
   
 ##### Step 5 - Commit & Test
-Commit the changes, create a Pull Request and merge them to master branch, ensure that webhook triggered two consequent Jenkins jobs, they ran successfully and copied all the files to the Jenkins-Ansible server into /home/ubuntu/ansible-config-mgt/ directory.
-  
-![Screen Shot 2021-06-11 at 2 34 37 PM](https://user-images.githubusercontent.com/44268796/121733971-277e8000-cac2-11eb-8c32-da688112f2b2.png)
-  
+Commit the changes, create a Pull Request and merge them to master branch, ensure that webhook triggered two consequent Jenkins jobs, they ran successfully and copied all the files to the Jenkins-Ansible server into /home/ubuntu/ansible-config-mgt/ directory. 
 
 
 Now run the playbook against the uat inventory:
