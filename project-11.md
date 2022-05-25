@@ -202,8 +202,6 @@ git commit -m "commit message"
 
 With the update to GitHub repository, Jenkins automatically triggered a new build and all the changes were updated in the workspace.
 
-![Screen Shot 2021-06-09 at 11 06 28 AM](https://user-images.githubusercontent.com/44268796/121380309-c3698980-c912-11eb-8da5-04ae27b6b0ce.png)
-
 
 Run the playbook to execute the commands on the host servers:
 
@@ -226,9 +224,6 @@ Additional Ansible Exercises:
 - Run some shell script
 
 The common.yml playbook was updated with additonal instructions to create a directory called 'test-directory' and also change the timezone to Asia/Tokyo on all servers.
-
-
-![Screen Shot 2021-06-09 at 3 41 15 PM](https://user-images.githubusercontent.com/44268796/121419191-b1e7a800-c939-11eb-8f56-e3010bb157fc.png)
 
 ![Screen Shot 2021-06-09 at 3 42 43 PM](https://user-images.githubusercontent.com/44268796/121419202-b3b16b80-c939-11eb-99f7-a3270822a102.png)
 
