@@ -4,7 +4,7 @@
   
 There are few requirements that must be met before starting the project:
 
-1. Properly configure the AWS account and Organization Unit. Use this [video](https://www.youtube.com/watch?v=9PQYCc_20-Q) to implement the setup.
+1. Properly configure the AWS account and Organization Unit.
 2. Create an AWS Master account. (Also known as Root Account)
 3. Within the Root account, create a sub-account and name it DevOps. (A different email address is required to complete this)
 4. Within the Root account, create an AWS Organization Unit (OU). Name it Dev. (The Dev resources will be launched in there)
@@ -17,8 +17,8 @@ There are few requirements that must be met before starting the project:
 
 
 6. Login to the newly created AWS account using the new email address.
-7. Create a free domain name for the fictitious company at Freenom domain registrar [here](https://www.freenom.com/en/index.html?lang=en).
-8. Create a hosted zone in AWS, and map it to your free domain from Freenom. Watch how to do that [here](https://www.youtube.com/watch?v=IjcHp94Hq8A)
+7. Create a free domain name for the fictitious company.
+8. Create a hosted zone in AWS, and map it to your free domain.
   
 ![Screen Shot 2021-07-06 at 12 59 27 PM](https://user-images.githubusercontent.com/44268796/124639367-12df9e80-de5a-11eb-9eb9-a19cf30382d8.png)
   
@@ -62,8 +62,6 @@ TLS certificates are required to handle secured connectivity to the Application 
 
 7. Create 3 Elastic IPs
 8. Create a Nat Gateway and assign one of the Elastic IPs (*The other 2 will be used by Bastion hosts). Add a new route on the private route table to configure destination as 0.0.0.0/0 and target as NAT Gateway.
-  
-  ![Screen Shot 2021-07-06 at 2 42 07 PM](https://user-images.githubusercontent.com/44268796/124651057-783a8c00-de68-11eb-877e-145460872307.png)
 
   ![Screen Shot 2021-07-06 at 2 44 00 PM](https://user-images.githubusercontent.com/44268796/124651207-a029ef80-de68-11eb-97ae-94577d356690.png)
 
@@ -80,7 +78,6 @@ TLS certificates are required to handle secured connectivity to the Application 
 - Webservers: The security group should allow SSH from bastion host, HTTP and HTTPS from the internal ALB only.
   
 - Data Layer: Access to the Data layer, which is comprised of Amazon Relational Database Service (RDS) and Amazon Elastic File System (EFS) must be carefully designed - webservers need to mount the file system and connect to the RDS database, bastion host needs to have SQL access to the RDS to use the MYSQL client
-  
   
 ![Screen Shot 2021-08-02 at 10 26 26 AM](https://user-images.githubusercontent.com/44268796/127877242-73ad9923-023d-4c31-a104-48c6d1e3ce80.png)
   
