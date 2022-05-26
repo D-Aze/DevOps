@@ -192,12 +192,7 @@ To really appreciate and feel the difference of Cloud Blue UI, trigger the build
 
 1. Click on Blue Ocean 
 
-![Screen Shot 2021-06-22 at 10 21 44 AM](https://user-images.githubusercontent.com/44268796/122941720-a639af80-d343-11eb-8c47-137831fd20a6.png)
-
-
 2. Select the project and click on the Play button against the branch
-
-![Screen Shot 2021-06-22 at 10 23 10 AM](https://user-images.githubusercontent.com/44268796/122941972-d97c3e80-d343-11eb-9d4d-b768d511e6fc.png)
 
 This pipeline is a multibranch one. This means, if there were more than one branch in GitHub, Jenkins would have scanned the repository to discover them all and it is possible to be able to trigger a build for each branch.
 
@@ -239,9 +234,6 @@ pipeline {
 To make the new branch show up in Jenkins, scan the repository by clicking on the “Administration” button. Navigate to the Ansible project and click on “Scan repository now”. Refresh the page and both branches will start building automatically. Go into Blue Ocean and see both branches there too. 
 
 ![Screen Shot 2021-06-22 at 10 43 12 AM](https://user-images.githubusercontent.com/44268796/122945683-bc953a80-d346-11eb-9bc0-b3beb972e7c1.png)
-
-
-![Screen Shot 2021-06-22 at 10 45 25 AM](https://user-images.githubusercontent.com/44268796/122945970-f6664100-d346-11eb-9779-7a0f4348af93.png)
 
 
 -  Create a pull request to merge the latest code into the `main branch`
