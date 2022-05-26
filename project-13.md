@@ -66,23 +66,6 @@ Paste the instruction below into the env-vars.yml file:
     - always
 ```
 
-Three things to note from the above code:
-
-The 'include_vars' syntax has been used instead of include. This is because Ansible developers decided to separate different features of the module. From Ansible version 2.8, the include module is deprecated and variants of include_* must be used. These are:
-
-include_role
-include_tasks
-include_vars
-
-In the same version, variants of import were also introduced, such as:
-
-import_role
-import_tasks
-
-Special variables {{ playbook_dir }} and {{ inventory_file }} are used in the above code. {{ playbook_dir }} will help Ansible to determine the location of the running playbook, and from there navigate to other path on the filesystem. {{ inventory_file }} on the other hand will dynamically resolve to the name of the inventory file being used, then append .yml, so that it picks up the required file within the env-vars folder.
-
-The variables are included using a loop. with_first_found implies that, looping through the list of files, the first one found is used. This is good practice so that the default values can be set in case an environment specific env file does not exist.
-
 
 #### Update site.yml with dynamic assignments
 
@@ -108,7 +91,7 @@ site.yml should now look like this:
 
 #### Community Roles
 
-It is time to create a role for MySQL database - it should install the MySQL package, create a database and configure users. There are tons of roles that have already been developed by other open source engineers. These roles are actually production ready, and dynamic to accomodate most of Linux flavours. With Ansible Galaxy again, we can simply download a ready to use ansible role. 
+It is time to create a role for MySQL database - it should install the MySQL package, create a database and configure users.
 
 #### Download Mysql Ansible Role
 
