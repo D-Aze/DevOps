@@ -1,14 +1,6 @@
 
 ### PROJECT 11: Ansible Configuration Management - Automate Project 7 to 10
 
-This project will make use of Ansible Configuration Management to automate routine server configuration tasks. 
-The project will focus on developing Ansible scripts to simulate the use of a Jump box/Bastion host to access the Web Servers.
-
-#### Task:
-
-- Install and configure Ansible client to act as a Jump Server/Bastion Host
-- Create a simple Ansible playbook to automate servers configuration
-
 #### Step 1 - Install and configure Ansible on EC2 Instance:
 
 ##### 1. Update Name tag on the Jenkins EC2 Instance to Jenkins-Ansible. This server will be used to run the playbooks.
@@ -25,7 +17,6 @@ sudo apt install ansible
 
 ansible --version
 ```
-![Screen Shot 2021-06-04 at 10 00 45 AM](https://user-images.githubusercontent.com/44268796/120813289-bf58f880-c51b-11eb-9df8-cd53d11ff458.png)
 
 
 ##### 4. Configure Jenkins build job to save the repository content every time any changes are made:
@@ -54,17 +45,9 @@ ls /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/
 ![Screen Shot 2021-06-04 at 10 42 13 AM](https://user-images.githubusercontent.com/44268796/120819393-87ed4a80-c521-11eb-9f85-66d2be3a11fe.png)
 
 
-The architecture of the setup so far looks like the diagram below:
-
-![Screen Shot 2021-06-04 at 10 45 12 AM](https://user-images.githubusercontent.com/44268796/120819865-fd591b00-c521-11eb-9f89-d45b6003077a.png)
-
-
 #### Step 2 - Prepare the development environment using Visual Studio Code
 
 Next step is to install a versatile Integrated development environment (IDE) or Source-code Editor. The IDE used in this project is Visual Studio Code (VSC). Configure it and connect it to the GitHub respository created for this project (https://code.visualstudio.com/docs/editor/github).
-
-
-![Screen Shot 2021-06-05 at 11 09 36 AM](https://user-images.githubusercontent.com/44268796/120896210-8d649680-c5ee-11eb-8c62-44493b2ffc8b.png)
 
 #### Step 3 - Begin Ansible Development
 
